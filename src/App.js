@@ -22,7 +22,7 @@ function App() {
       }
       </section>
 
-      <Btns />
+      <Btns deg={deg} />
 
       <Footer />
     </figure>
