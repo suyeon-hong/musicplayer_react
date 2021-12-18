@@ -106,6 +106,78 @@ figure {
             font: 12px/1.2 'arial';
             color: #777;
             margin-bottom: 3vh; }
+  figure .prev {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20vw, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    figure .prev:hover span {
+      opacity: 0;
+      transform: translateX(100%); }
+    figure .prev:hover::before, figure .prev:hover::after {
+      transform: rotate(0deg); }
+    figure .prev span {
+      font: 11px/1 'arial';
+      color: #fff;
+      transform: translateX(30%);
+      transition: .5s; }
+    figure .prev::before, figure .prev::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform-origin: left center;
+      transition: 0.5s; }
+    figure .prev::before {
+      transform: rotate(-180deg); }
+    figure .prev::after {
+      transform: rotate(180deg); }
+  figure .next {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(20vw, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    figure .next:hover span {
+      opacity: 0;
+      transform: translateX(-100%); }
+    figure .next:hover::before, figure .next:hover::after {
+      transform: rotate(0deg); }
+    figure .next span {
+      font: 11px/1 'arial';
+      color: #fff;
+      transform: translateX(-30%);
+      transition: .5s; }
+    figure .next::before, figure .next::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform-origin: right center;
+      transition: 0.5s; }
+    figure .next::before {
+      transform: rotate(-180deg); }
+    figure .next::after {
+      transform: rotate(180deg); }
   figure > p {
     position: absolute;
     bottom: 7vh;
