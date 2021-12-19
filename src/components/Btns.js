@@ -5,13 +5,11 @@ function Btns(props) {
 
     function next(e){
         setIndex(--index);
-        const frame = e.target.closest("figure").querySelector("section");
-        frame.style.transform = `rotate(${index*props.deg}deg)`;
+        props.frame.current.style.transform = `rotate(${index*props.deg}deg)`;
     }
     function prev(e){
         setIndex(++index);
-        const frame = e.target.closest("figure").querySelector("section");
-        frame.style.transform = `rotate(${index*props.deg}deg)`;
+        props.frame.current.style.transform = `rotate(${index*props.deg}deg)`;
     }
     return(
         <>
