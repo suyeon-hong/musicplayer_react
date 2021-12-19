@@ -3,20 +3,16 @@ import { useState } from "react";
 function Btns(props) {
     let [index, setIndex] = useState(0);
 
-    function next(e){
-        setIndex(--index);
-        props.frame.current.style.transform = `rotate(${index*props.deg}deg)`;
-    }
-    function prev(e){
-        setIndex(++index);
+    function move(num) {
+        setIndex(num)
         props.frame.current.style.transform = `rotate(${index*props.deg}deg)`;
     }
     return(
         <>
-            <div className="prev" onClick={e=>prev(e)}>
+            <div className="prev" onClick={()=>move(++index)}>
                 <span>PREV</span>
             </div>
-            <div className="next" onClick={e=> next(e)}>
+            <div className="next" onClick={()=>move(--index)}>
                 <span>NEXT</span>
             </div>
         </>
