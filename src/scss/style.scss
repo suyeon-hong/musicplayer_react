@@ -117,7 +117,26 @@ figure{
                         color: #777;
                         margin-bottom: 3vh;
                     }
+                    .btns{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        align-content: center;
+
+                        i{
+                            font-size: 20px;
+                            color: #555;
+                            cursor: pointer;
+                            transition: .5s;
+
+                            &:hover{
+                                transform: scale(1.2);
+                                color: #111;
+                            }
+                        }
+                    }
                 }
+                video{display: none;}
             }
         }
     }

@@ -107,6 +107,21 @@ figure {
             font: 12px/1.2 'arial';
             color: #777;
             margin-bottom: 3vh; }
+          figure section article .inner .txt .btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: center; }
+            figure section article .inner .txt .btns i {
+              font-size: 20px;
+              color: #555;
+              cursor: pointer;
+              transition: .5s; }
+              figure section article .inner .txt .btns i:hover {
+                transform: scale(1.2);
+                color: #111; }
+        figure section article .inner video {
+          display: none; }
   figure .prev {
     width: 60px;
     height: 60px;
