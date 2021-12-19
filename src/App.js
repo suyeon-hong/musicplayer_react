@@ -11,6 +11,7 @@ function App() {
   const deg = 360/arr.length;
   let [txt, setTxt] = useState(arr);
   const frame = useRef(null);
+  const audio = useRef(null);
 
   return (
     <figure>
@@ -19,7 +20,7 @@ function App() {
       <section ref={frame}>
         {
           txt.map((data,index)=>{
-            return <Panels key={index} index={index} data={data} deg={deg} />
+            return <Panels key={index} index={index} data={data} deg={deg} audio={audio} />
           })
       }
       </section>

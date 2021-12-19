@@ -117,7 +117,7 @@ figure {
               color: #555;
               cursor: pointer;
               transition: .5s; }
-              figure section article .inner .txt .btns i:hover {
+              figure section article .inner .txt .btns i:hover, figure section article .inner .txt .btns i.on {
                 transform: scale(1.2);
                 color: #111; }
         figure section article .inner video {
