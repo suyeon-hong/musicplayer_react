@@ -14,17 +14,29 @@ function Panels(props) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, itaque?</p>
                     <div className="btns">
                         <i className="fas fa-pause" onClick={e=>{
+                            const article = e.target.closest("article");
+                            const isOn = article.classList.contains("on");
+
+                            if(!isOn) return;
                             props.audio.current.pause();
-                            e.target.closest('.inner').querySelector(".pic").classList.remove("on");
+                            article.querySelector(".pic").classList.remove("on");
                         }}></i>
                         <i className="fas fa-play" onClick={e=>{
+                            const article = e.target.closest("article");
+                            const isOn = article.classList.contains("on");
+
+                            if(!isOn) return;
                             props.audio.current.play();
-                            e.target.closest('.inner').querySelector(".pic").classList.add("on");
+                            article.querySelector(".pic").classList.add("on");
                         }}></i>
                         <i className="fas fa-redo" onClick={e=>{
+                            const article = e.target.closest("article");
+                            const isOn = article.classList.contains("on");
+
+                            if(!isOn) return;
                             props.audio.current.pause();
                             props.audio.current.load();
-                            e.target.closest('.inner').querySelector(".pic").classList.remove("on");
+                            article.querySelector(".pic").classList.remove("on");
                         }}></i>
                     </div>
                 </div>

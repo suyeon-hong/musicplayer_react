@@ -4,8 +4,11 @@ function Btns(props) {
     let [index, setIndex] = useState(0);
 
     function move(num) {
-        setIndex(num)
+        setIndex(num);
         props.frame.current.style.transform = `rotate(${index*props.deg}deg)`;
+        const article = props.frame.current.querySelectorAll('article');
+        article.forEach(el=>el.classList.remove("on"));
+        article[-index].classList.add("on");
     }
     return(
         <>
