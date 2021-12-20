@@ -75,6 +75,9 @@ figure{
                     justify-content: center;
                     align-items: center;
 
+                    &.on{
+                        animation: rotate 3s linear infinite;
+                    }
                     &::before, &::after{
                         content: '';
                         display: block;
@@ -129,8 +132,8 @@ figure{
                             cursor: pointer;
                             transition: .5s;
 
-                            &:hover, &.on{
-                                transform: scale(1.2);
+                            &:hover{
+                                transform: scale(1.3);
                                 color: #111;
                             }
                         }
@@ -234,4 +237,10 @@ figure{
         letter-spacing: 2px;
         opacity: 0.8;
     }
+}
+
+
+@keyframes rotate{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
 }

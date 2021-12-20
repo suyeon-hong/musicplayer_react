@@ -14,23 +14,17 @@ function Panels(props) {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, itaque?</p>
                     <div className="btns">
                         <i className="fas fa-pause" onClick={e=>{
-                            const btns = e.target.closest('.btns').querySelectorAll('i');
-                            for(let el of btns) el.classList.remove("on");
-                            e.target.classList.add("on");
                             props.audio.current.pause();
+                            e.target.closest('.inner').querySelector(".pic").classList.remove("on");
                         }}></i>
                         <i className="fas fa-play" onClick={e=>{
-                            const btns = e.target.closest('.btns').querySelectorAll('i');
-                            for(let el of btns) el.classList.remove("on");
-                            e.target.classList.add("on");
                             props.audio.current.play();
+                            e.target.closest('.inner').querySelector(".pic").classList.add("on");
                         }}></i>
                         <i className="fas fa-redo" onClick={e=>{
-                            const btns = e.target.closest('.btns').querySelectorAll('i');
-                            for(let el of btns) el.classList.remove("on");
-                            e.target.classList.add("on");
                             props.audio.current.pause();
                             props.audio.current.load();
+                            e.target.closest('.inner').querySelector(".pic").classList.remove("on");
                         }}></i>
                     </div>
                 </div>

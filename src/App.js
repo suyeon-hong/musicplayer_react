@@ -20,7 +20,7 @@ function App() {
       <section ref={frame}>
         {
           txt.map((data,index)=>{
-            return <Panels key={index} index={index} data={data} deg={deg} audio={audio} />
+            return <Panels key={index} index={index} data={data} deg={deg} audio={audio} frame={frame} />
           })
       }
       </section>

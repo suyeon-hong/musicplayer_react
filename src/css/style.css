@@ -72,6 +72,8 @@ figure {
           display: flex;
           justify-content: center;
           align-items: center; }
+          figure section article .inner .pic.on {
+            animation: rotate 3s linear infinite; }
           figure section article .inner .pic::before, figure section article .inner .pic::after {
             content: '';
             display: block;
@@ -117,8 +119,8 @@ figure {
               color: #555;
               cursor: pointer;
               transition: .5s; }
-              figure section article .inner .txt .btns i:hover, figure section article .inner .txt .btns i.on {
-                transform: scale(1.2);
+              figure section article .inner .txt .btns i:hover {
+                transform: scale(1.3);
                 color: #111; }
         figure section article .inner video {
           display: none; }
@@ -203,5 +205,11 @@ figure {
     color: #fff;
     letter-spacing: 2px;
     opacity: 0.8; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */
